@@ -29,19 +29,20 @@ The solution both illustrates appropriate SemVer practices and API versioning me
 |    | V1.0 |V2.0| V3.0|V3.1| V4.0 |
 |---|---|---|---|---|---|
 |/BookStore/Book |❌|❌|❔|❔|✔️|
-|/BookStore/Book/{isbn} |❌|❌|❔|❔|✔️|
-|/BookStore/Book/{title} |❌|❌|❔|❔|✔️|
+|/BookStore/Book/{isbn} |🔴|❌|❔|❔|✔️|
+|/BookStore/Book/{title} |🔴|🔴|❔|❔|✔️|
 |/Orders |❌|✔️|✔️|✔️|✔️|
-|/Orders (POST) |❌|✔️|✔️|✔️|✔️|
+|/Orders (POST) |🔴|✔️|✔️|✔️|✔️|
 |/Orders/{id} |❌|✔️|✔️|✔️|✔️|
-|/Orders/{id} (DEL) |❌|❌|✔️|✔️|✔️|
-|/vX.X/People |❌|✔️|✔️|✔️|✔️|
-|/vX.X/People (POST) |❌|❌|✔️|✔️|✔️|
+|/Orders/{id} (DEL) |🔴|🔴|✔️|✔️|✔️|
+|/vX.X/People |🔴|✔️|✔️|✔️|✔️|
+|/vX.X/People (POST) |🔴|🔴|✔️|✔️|✔️|
 |/vX.X/People/{id} |❌|✔️|✔️|✔️|✔️|
-|/vX.X/People/{id} (DEL) |❌|❌|❌|✔️|✔️|
+|/vX.X/People/{id} (DEL) |🔴|🔴|🔴|✔️|✔️|
 
  - ✔️=> Supported 
- - ❌=> Deprecated / not implemented
+ - ❌=> Deprecated
+ - 🔴 => Not implemented
  - ❔=> Supported for API callers made compatible with older versions.
 
 Following is an explanation of each version and its upgrade:
