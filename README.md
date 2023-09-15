@@ -65,7 +65,8 @@ The solution demonstrates two different methods of versioning supported by the A
  2. For the *Book* object, the versioning implementation can be found within the projects present inside the *src* directory. This implementation follows ABP's layered implementation conventions. DTOs and the service interface is found within *BookStore.Application.Contracts* and implemented within *BookStore.Application*. The controller (singular) is found within *BookStore.HttpApi*, and the proxies are found in *BookStore.HttpApi.Client*. It should be noted that, unlike the previous implementation, the controllers and service interfaces are found within their respective singular files (*i.e.* the controllers for V1.0 and V4.0 are in the same file). Deprecation is achieved via setting the flag `Deprecated = true` within the controller attribute `ApiVersion`.
 
 ## Known Bugs
-While starting the solution, the opened terminal displays multiple errors indicating that the program is unable to find certain JavaScript files. It has no known effects on functionality and could be safely ignored for the purposes of this project.
+~~While starting the solution, the opened terminal displays multiple errors indicating that the program is unable to find certain JavaScript files. It has no known effects on functionality and could be safely ignored for the purposes of this project.~~
+Should be fixed now.
 
 ## Acknowledgements
 abp-samples: For providing the foundation of this project.
